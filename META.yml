@@ -1,0 +1,15 @@
+---
+name: Catalyst-Plugin-Authentication-Credential-Hatena
+version: 0.01
+author:
+  - 'Daisuke Murase <typester@cpan.org>'
+abstract: Hatena authentication for Catalyst
+license: perl
+requires:
+  Catalyst: 5.50
+  Hatena::API::Auth: 0.02
+provides:
+  Catalyst::Plugin::Authentication::Credential::Hatena:
+    file: lib/Catalyst/Plugin/Authentication/Credential/Hatena.pm
+    version: 0.01
+generated_by: Module::Build version 0.2612
