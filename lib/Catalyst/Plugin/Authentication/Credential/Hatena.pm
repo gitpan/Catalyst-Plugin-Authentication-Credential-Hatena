@@ -2,7 +2,7 @@ package Catalyst::Plugin::Authentication::Credential::Hatena;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Hatena::API::Auth;
 use UNIVERSAL::require;
@@ -125,7 +125,7 @@ sub authenticate_hatena {
     }
     else {
         $c->log->debug(
-            sprintf "Failed to authenticate flickr.  Reason: '%s'",
+            sprintf "Failed to authenticate hatena.  Reason: '%s'",
             $hatena->errstr, )
             if $c->debug;
 
