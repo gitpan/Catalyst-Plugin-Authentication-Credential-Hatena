@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-Authentication-Credential-Hatena
-version: 0.02
+version: 0.03
 author:
   - 'Daisuke Murase <typester@cpan.org>'
 abstract: Hatena authentication for Catalyst
@@ -13,8 +13,8 @@ requires:
 provides:
   Catalyst::Plugin::Authentication::Credential::Hatena:
     file: lib/Catalyst/Plugin/Authentication/Credential/Hatena.pm
-    version: 0.02
-generated_by: Module::Build version 0.28
+    version: 0.03
+generated_by: Module::Build version 0.2805
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

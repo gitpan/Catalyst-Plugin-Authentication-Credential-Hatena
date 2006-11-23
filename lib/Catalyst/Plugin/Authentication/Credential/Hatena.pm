@@ -2,7 +2,7 @@ package Catalyst::Plugin::Authentication::Credential::Hatena;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Hatena::API::Auth;
 use UNIVERSAL::require;
@@ -91,7 +91,7 @@ sub setup {
 =cut
 
 sub authenticate_hatena_url {
-    shift->config->{authentication}->{hatena}->{hatena_object}->uri_to_login;
+    shift->config->{authentication}->{hatena}->{hatena_object}->uri_to_login(@_);
 }
 
 =head2 authenticate_hatena
