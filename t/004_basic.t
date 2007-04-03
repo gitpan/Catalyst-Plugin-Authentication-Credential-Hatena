@@ -48,15 +48,15 @@ my $res = Test::MockObject->new;
 
 $res->{name} = 'hatena';
 
-$res->fake_module('Hatena::API::Auth::User');
-$res->mock( name => sub { shift->{name} } );
+$res->fake_module('Hatena::API::Auth::User', name => sub { shift->{name} });
 
 my $params = {};
 $req->fake_module('Catalyst::Request');
-$req->mock( params => sub {$params} );
+$req->mock( params           => sub {$params} );
 $c->mock( req                => sub {$req} );
 $c->mock( default_auth_store => sub { } );
 $c->mock( set_authenticated  => sub { } );
+$c->mock( debug              => sub {0} );
 
 my $method;
 $hatena->mock( login => sub { $res } );
